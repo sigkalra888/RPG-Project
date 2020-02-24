@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d337879b66e794e843784e5684cf35, type: 3}
+  m_Name: DefaultParam
+  m_EditorClassIdentifier: 
+  param:
+    HP: 100
+    STA: 50
+    ATK: 10
+    DEF: 10
+    DEX: 10
+    jumpPow: 10
