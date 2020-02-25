@@ -172,10 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuItem:
+  - {fileID: 0}
   - {fileID: 2088247927}
   - {fileID: 656978041}
   - {fileID: 1061847149}
-  menuNumber: 0
+  menuNumber: 1
 --- !u!1 &260123048
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21132c8b86ebd14eb2845e1a55cc43a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TitleObjectSet: {fileID: 2080309275}
+  Canvases:
+  - {fileID: 2080309270}
+  - {fileID: 2131745729}
   afkTime: 0
+  menuMode: 0
 --- !u!4 &407802894
 Transform:
   m_ObjectHideFlags: 0
@@ -997,8 +1001,9 @@ GameObject:
   - component: {fileID: 1928332885}
   - component: {fileID: 1928332884}
   - component: {fileID: 1928332883}
+  - component: {fileID: 1928332886}
   m_Layer: 5
-  m_Name: CharacterSelectButton
+  m_Name: CharacterSelectButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1067,7 +1072,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2131745734}
+      - m_Target: {fileID: 1928332886}
         m_MethodName: PushSelectButton
         m_Mode: 1
         m_Arguments:
@@ -1114,6 +1119,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928332881}
   m_CullTransparentMesh: 0
+--- !u!114 &1928332886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928332881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d97552a4adcf224abd958c0b67ba3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984192030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1395,6 @@ GameObject:
   - component: {fileID: 2131745732}
   - component: {fileID: 2131745731}
   - component: {fileID: 2131745730}
-  - component: {fileID: 2131745734}
   m_Layer: 5
   m_Name: CharacterSelectSet
   m_TagString: Untagged
@@ -1466,15 +1482,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2131745734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131745729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d97552a4adcf224abd958c0b67ba3c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

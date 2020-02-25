@@ -6,6 +6,7 @@ public class CharacterCreate : MonoBehaviour
 {
     public void PushSelectButton()
     {
-        CharacterManager.Instance.CreateCharacter();
+        int index = int.Parse(gameObject.name.Substring(name.Length - 1));
+        CharacterManager.Instance.CreateCharacter(index);
     }
 }
