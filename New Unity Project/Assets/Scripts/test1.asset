@@ -9,13 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8d337879b66e794e843784e5684cf35, type: 3}
-  m_Name: DefaultParam
+  m_Script: {fileID: 11500000, guid: d2efe117deb604c479b452fbd62f6721, type: 3}
+  m_Name: test1
   m_EditorClassIdentifier: 
-  param:
-    HP: 100
-    STA: 50
-    ATK: 10
-    DEF: 10
-    DEX: 10
-    jumpPow: 10
+  characterName: meme
+  maxHp: 1000
+  hp: 10000000
+  maxAtk: 100
+  atk: 50
+  maxAtk_m: 500
+  atk_m: 5
+  maxDef: 90
+  def: 9
+  maxDef_m: 900
+  def_m: 20
+  maxAgility: 200
+  agility: 2

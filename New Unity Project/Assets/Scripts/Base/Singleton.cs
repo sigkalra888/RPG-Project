@@ -24,6 +24,9 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private protected bool dontDestroy = true;
+
     protected virtual void Awake()
     {
         if (this != Instance)
@@ -32,6 +35,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return;
         }
 
+        if (!dontDestroy) { return; }
         DontDestroyOnLoad(this.gameObject);
     }
 }
