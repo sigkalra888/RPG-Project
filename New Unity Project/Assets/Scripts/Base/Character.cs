@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     protected string characterName;
+    protected int level;
     protected int maxHp;
     protected int hp;
     protected int maxAtk;
@@ -45,6 +46,7 @@ public class Character : MonoBehaviour
     public void ParameterSet(PlayerParameter pp)
     {
         characterName = pp.characterName;
+        level = pp.level;
         maxHp = pp.maxHp;
         hp = pp.hp;
         maxAtk = pp.maxAtk;

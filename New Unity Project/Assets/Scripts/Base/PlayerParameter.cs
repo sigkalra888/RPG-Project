@@ -7,6 +7,8 @@ using UnityEngine;
 public class PlayerParameter : ScriptableObject
 {
     public string characterName;
+    public int level = 1;
+    public int exp = 100;
     public int maxHp;
     public int hp;
     public int maxAtk;

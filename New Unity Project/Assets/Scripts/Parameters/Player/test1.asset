@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: test1
   m_EditorClassIdentifier: 
   characterName: meme
+  level: 1
+  exp: 100
   maxHp: 1000
   hp: 10000000
   maxAtk: 100
