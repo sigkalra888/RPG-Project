@@ -510,10 +510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a8038b88602524597aca865a02d693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxJumpSpeed: 0.2
-  gravity: 0.02
+  maxJumpSpeed: 1.2
+  gravity: 0.4
   accelerration: 0.001
-  decay: 0
+  decay: 0.88
   maxMoveSpeed: 0.1
   isDush: 0
   isJump: 0

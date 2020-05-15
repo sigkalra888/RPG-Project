@@ -23,7 +23,9 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (isJump) { return; }
             isJump = true;
+            jumpSpeed = maxJumpSpeed;
         }
 
         vertical = Input.GetAxis("Vertical");
@@ -47,6 +49,7 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
+        JumpAction();
         MoveAction();
     }
     /// <summary>
@@ -57,17 +60,22 @@ public class PlayerInput : MonoBehaviour
         Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1));
         Vector3 moveForward = cameraForward * vertical + Camera.main.transform.right * horizontal;
         
-        transform.position += isDush != false ? (moveForward * moveSpeed) * 2f + new Vector3(0, jumpSpeed, 0) : moveForward * moveSpeed + new Vector3(0, jumpSpeed, 0);
+        transform.position += isDush != false ? (moveForward * moveSpeed) * 2f : moveForward * moveSpeed;
 
-        if (isJump && jumpSpeed < maxJumpSpeed) { jumpSpeed += accelerration; }
-        else if (isJump && jumpSpeed > maxJumpSpeed) { isJump = false; }
-        Debug.Log(jumpSpeed);
-
-        if(!isJump && transform.position.y > 0) { transform.position -= new Vector3(0, gravity, 0); }
+        if(transform.position.y > 0) { transform.position -= new Vector3(0, gravity, 0); }
+        else if(transform.position.y <= 0) { transform.position = new Vector3(transform.position.x, 0, transform.position.z); }
 
         if (moveForward != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(moveForward);
         }
+    }
+
+    private void JumpAction()
+    {
+        if (!isJump) { return; }
+        transform.position += new Vector3(0, jumpSpeed, 0);
+        jumpSpeed *= decay;
+        if(jumpSpeed < 0.01 || transform.position.y <= 0) { isJump = false; }
     }
 }
